@@ -21,7 +21,7 @@ This HRMS API provides complete functionality for managing:
 ## Base URL
 
 ```
-https://api.your-domain.com/api
+https://api.upsurgemedia.in/
 ```
 
 ## Authentication
