@@ -1,40 +1,32 @@
 # Table of Contents
 
-## Introduction
-* [Overview](README.md)
+## Getting Started
 
-## Authentication
-* [Authentication API](authentication.md)
+* [API Overview](getting-started/api-overview.md)
+* [Authentication](getting-started/authentication.md)
+* [Quick Start Guide](getting-started/quick-start.md)
 
 ## Core APIs
-* [Employees](employees.md)
-* [Attendance](attendance.md)
-* [Leave Management](leave.md)
-* [Payroll](payroll.md)
 
-## Asset & Document Management
-* [Assets](assets.md)
-* [Documents](documents.md)
+* [Users API](core-apis/users.md)
+* [Companies API](core-apis/companies.md)
+* [Employees API](core-apis/employees.md)
 
-## Time & Expense Tracking
-* [Timesheets](timesheets.md)
-* [Expenses](expenses.md)
+## Attendance & Time
 
-## Employee Experience
-* [Notifications](notifications.md)
-* [Onboarding](onboarding.md)
+* [Attendance API](attendance-time/attendance.md)
+* [Leave Management API](attendance-time/leave.md)
 
-## Analytics & Reporting
-* [Dashboard](dashboard.md)
-* [Reports](reports.md)
+## HR Management
 
-## Integration Guide
-* [Getting Started](getting-started.md)
-* [Error Handling](error-handling.md)
-* [Rate Limiting](rate-limiting.md)
-* [Webhooks](webhooks.md)
+* [Departments API](hr-management/departments.md)
+* [Documents API](hr-management/documents.md)
 
-## Reference
-* [HTTP Status Codes](status-codes.md)
-* [Data Types](data-types.md)
-* [Changelog](changelog.md)
+## Payroll & Benefits
+
+* [Payroll API](payroll-benefits/payroll.md)
+
+## System Features
+
+* [Dashboard API](system-features/dashboard.md)
+* [Notifications API](system-features/notifications.md)
