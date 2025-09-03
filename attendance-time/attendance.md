@@ -5,7 +5,7 @@ The Attendance API provides comprehensive time tracking and attendance managemen
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/attendance
+https://api.upsurgemedia.in/api/v1/attendance
 ```
 
 ## Overview
@@ -147,7 +147,7 @@ Record employee arrival and start work session.
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/attendance/check-in" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/attendance/check-in" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -427,7 +427,7 @@ Retrieve attendance records with filtering and pagination.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/attendance?startDate=2025-09-01&endDate=2025-09-30&employeeId=emp-uuid" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/attendance?startDate=2025-09-01&endDate=2025-09-30&employeeId=emp-uuid" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -850,7 +850,7 @@ Export attendance data in various formats.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/attendance/export?format=csv&startDate=2025-09-01&endDate=2025-09-30" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/attendance/export?format=csv&startDate=2025-09-01&endDate=2025-09-30" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -o "attendance_report.csv"
 ```

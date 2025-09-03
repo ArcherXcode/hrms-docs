@@ -16,7 +16,7 @@ The Upsurge HRMS API uses JWT (JSON Web Tokens) for authentication. This guide c
 **Endpoint:** `POST /auth/login`
 
 ```bash
-curl -X POST "https://api.upsurgemedia.in/auth/login" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/auth/login" \
   -H "Content-Type: application/json" \
   -d '{
     "email": "user@company.com",
@@ -54,7 +54,7 @@ curl -X POST "https://api.upsurgemedia.in/auth/login" \
 Include the access token in the `Authorization` header for all subsequent requests:
 
 ```bash
-curl -X GET "https://api.upsurgemedia.in/employees" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/employees" \
   -H "Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
 ```
 
@@ -65,7 +65,7 @@ When your access token expires, use the refresh token to get a new one:
 **Endpoint:** `POST /auth/refresh`
 
 ```bash
-curl -X POST "https://api.upsurgemedia.in/auth/refresh" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/auth/refresh" \
   -H "Content-Type: application/json" \
   -d '{
     "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
@@ -239,7 +239,7 @@ class AuthService {
 **Endpoint:** `POST /auth/logout`
 
 ```bash
-curl -X POST "https://api.upsurgemedia.in/auth/logout" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/auth/logout" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
@@ -441,7 +441,7 @@ employees = api.make_request("GET", "/employees").json()
 
 ```bash
 # 1. Login and save response
-TOKEN_RESPONSE=$(curl -s -X POST "https://api.upsurgemedia.in/auth/login" \
+TOKEN_RESPONSE=$(curl -s -X POST "https://api.upsurgemedia.in/api/v1/auth/login" \
   -H "Content-Type: application/json" \
   -d '{
     "email": "admin@upsurgemedia.com",
@@ -452,7 +452,7 @@ TOKEN_RESPONSE=$(curl -s -X POST "https://api.upsurgemedia.in/auth/login" \
 ACCESS_TOKEN=$(echo $TOKEN_RESPONSE | jq -r '.accessToken')
 
 # 3. Make authenticated request
-curl -X GET "https://api.upsurgemedia.in/employees" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/employees" \
   -H "Authorization: Bearer $ACCESS_TOKEN"
 ```
 

@@ -5,7 +5,7 @@ The Departments API provides comprehensive organizational structure management i
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/departments
+https://api.upsurgemedia.in/api/v1/departments
 ```
 
 ## Overview
@@ -135,7 +135,7 @@ Retrieve departments with optional hierarchy and filtering.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/departments?includeHierarchy=true&includeEmployeeCount=true" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/departments?includeHierarchy=true&includeEmployeeCount=true" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -269,7 +269,7 @@ Create a new department (Admin/HR only).
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/departments" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/departments" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

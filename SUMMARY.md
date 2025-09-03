@@ -21,12 +21,29 @@
 
 * [Departments API](hr-management/departments.md)
 * [Documents API](hr-management/documents.md)
+* [Onboarding API](hr-management/onboarding.md)
 
 ## Payroll & Benefits
 
 * [Payroll API](payroll-benefits/payroll.md)
+* [Expenses API](payroll-benefits/expenses.md)
 
 ## System Features
 
 * [Dashboard API](system-features/dashboard.md)
 * [Notifications API](system-features/notifications.md)
+* [Search API](system-features/search.md)
+* [Settings API](system-features/settings.md)
+* [Reports API](system-features/reports.md)
+
+## Asset Management
+
+* [Assets API](asset-management/assets.md)
+
+## Organization Management
+
+* [Organization Structure API](organization/structure.md)
+
+## Health & Monitoring
+
+* [Health Check API](monitoring/health.md)

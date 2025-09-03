@@ -5,7 +5,7 @@ The Documents API provides comprehensive document management functionality inclu
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/documents
+https://api.upsurgemedia.in/api/v1/documents
 ```
 
 ## Overview
@@ -208,7 +208,7 @@ Retrieve documents with filtering and pagination.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/documents?employeeId=emp-uuid&type=contract&status=active" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/documents?employeeId=emp-uuid&type=contract&status=active" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -337,7 +337,7 @@ tags: "contract,employment,2025"
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/documents" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/documents" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -F "file=@contract.pdf" \
   -F "title=Employment Contract - New Hire" \
@@ -399,7 +399,7 @@ Download a document file.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/documents/doc-uuid/download" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/documents/doc-uuid/download" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -o "downloaded_document.pdf"
 ```

@@ -5,7 +5,7 @@ The Notifications API provides comprehensive notification management including r
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/notifications
+https://api.upsurgemedia.in/api/v1/notifications
 ```
 
 ## Overview
@@ -357,7 +357,7 @@ Retrieve notifications for the authenticated user.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/notifications?isRead=false&priority=high" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/notifications?isRead=false&priority=high" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -1114,13 +1114,13 @@ Get detailed delivery reports for notifications.
 
 Connect to real-time notification feed.
 
-**Endpoint:** `wss://api.upsurgemedia.in/notifications/live`
+**Endpoint:** `wss://api.upsurgemedia.in/api/v1/notifications/live`
 
 **Headers:** `Authorization: Bearer <token>`
 
 **Connection Example:**
 ```javascript
-const ws = new WebSocket('wss://api.upsurgemedia.in/notifications/live?token=YOUR_TOKEN');
+const ws = new WebSocket('wss://api.upsurgemedia.in/api/v1/notifications/live?token=YOUR_TOKEN');
 
 ws.onopen = function() {
   console.log('Connected to notification feed');
@@ -1157,7 +1157,7 @@ Alternative real-time connection using SSE.
 
 **Example:**
 ```javascript
-const eventSource = new EventSource('https://api.upsurgemedia.in/notifications/events?token=YOUR_TOKEN');
+const eventSource = new EventSource('https://api.upsurgemedia.in/api/v1/notifications/events?token=YOUR_TOKEN');
 
 eventSource.onmessage = function(event) {
   const data = JSON.parse(event.data);
@@ -1250,7 +1250,7 @@ class NotificationService {
   }
 
   connectWebSocket() {
-    const wsUrl = `wss://api.upsurgemedia.in/notifications/live?token=${this.token}`;
+    const wsUrl = `wss://api.upsurgemedia.in/api/v1/notifications/live?token=${this.token}`;
     this.ws = new WebSocket(wsUrl);
     
     this.ws.onopen = () => {
@@ -1274,7 +1274,7 @@ class NotificationService {
   }
 
   connectSSE() {
-    const sseUrl = `https://api.upsurgemedia.in/notifications/events?token=${this.token}`;
+    const sseUrl = `https://api.upsurgemedia.in/api/v1/notifications/events?token=${this.token}`;
     this.eventSource = new EventSource(sseUrl);
     
     this.eventSource.onopen = () => {

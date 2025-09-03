@@ -5,7 +5,7 @@ The Payroll API provides comprehensive payroll management functionality includin
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/payroll
+https://api.upsurgemedia.in/api/v1/payroll
 ```
 
 ## Overview
@@ -377,7 +377,7 @@ Retrieve payroll records with filtering and pagination.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/payroll?month=9&year=2025&status=approved" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/payroll?month=9&year=2025&status=approved" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -927,7 +927,7 @@ Download payslip PDF file.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/payroll/payslips/payslip-uuid/download" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/payroll/payslips/payslip-uuid/download" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -o "payslip.pdf"
 ```

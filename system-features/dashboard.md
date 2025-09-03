@@ -5,7 +5,7 @@ The Dashboard API provides comprehensive analytics, metrics, and real-time data 
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/dashboard
+https://api.upsurgemedia.in/api/v1/dashboard
 ```
 
 ## Overview
@@ -337,7 +337,7 @@ Retrieve complete dashboard data for the authenticated user.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/dashboard?period=month&refresh=true" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/dashboard?period=month&refresh=true" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -823,7 +823,7 @@ Get real-time dashboard updates via WebSocket or Server-Sent Events.
 
 **WebSocket Connection:**
 ```javascript
-const ws = new WebSocket('wss://api.upsurgemedia.in/dashboard/updates?token=YOUR_TOKEN');
+const ws = new WebSocket('wss://api.upsurgemedia.in/api/v1/dashboard/updates?token=YOUR_TOKEN');
 
 ws.onmessage = function(event) {
   const update = JSON.parse(event.data);
@@ -884,7 +884,7 @@ class DashboardService {
   }
 
   connectRealtime(onUpdate) {
-    const wsUrl = `wss://api.upsurgemedia.in/dashboard/updates?token=${this.token}`;
+    const wsUrl = `wss://api.upsurgemedia.in/api/v1/dashboard/updates?token=${this.token}`;
     this.ws = new WebSocket(wsUrl);
     
     this.ws.onmessage = (event) => {

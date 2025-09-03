@@ -16,7 +16,7 @@ Before you begin, ensure you have:
 First, you need to authenticate and obtain a JWT token:
 
 ```bash
-curl -X POST "https://api.upsurgemedia.in/auth/login" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/auth/login" \
   -H "Content-Type: application/json" \
   -d '{
     "email": "your-email@company.com",
@@ -55,7 +55,7 @@ For testing purposes, you can use these pre-configured accounts:
 Using the token from Step 1, make your first authenticated request:
 
 ```bash
-curl -X GET "https://api.upsurgemedia.in/employees" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/employees" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
   -H "Content-Type: application/json"
 ```
@@ -90,7 +90,7 @@ curl -X GET "https://api.upsurgemedia.in/employees" \
 Get role-based dashboard information:
 
 ```bash
-curl -X GET "https://api.upsurgemedia.in/dashboard/overview" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/dashboard/overview" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
@@ -98,7 +98,7 @@ curl -X GET "https://api.upsurgemedia.in/dashboard/overview" \
 Search across employees, departments, and more:
 
 ```bash
-curl -X GET "https://api.upsurgemedia.in/search/global?q=john" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/search/global?q=john" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN"
 ```
 
@@ -106,7 +106,7 @@ curl -X GET "https://api.upsurgemedia.in/search/global?q=john" \
 Record employee attendance:
 
 ```bash
-curl -X POST "https://api.upsurgemedia.in/attendance/check-in" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/attendance/check-in" \
   -H "Authorization: Bearer YOUR_ACCESS_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -294,7 +294,7 @@ async function apiCall(endpoint, options = {}) {
 1. **Explore the API**: Check out our [API Overview](api-overview.md) for a complete list of endpoints
 2. **Authentication Deep Dive**: Learn more about [Authentication](authentication.md) and security
 3. **Integration Examples**: See real-world examples in our endpoint documentation
-4. **Testing**: Use our Swagger UI at `https://api.upsurgemedia.in/api` for interactive testing
+4. **Testing**: Use our Swagger UI at `https://api.upsurgemedia.in/api/docs` for interactive testing
 
 ## 🆘 Need Help?
 

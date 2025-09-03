@@ -5,7 +5,7 @@ The Employees API provides comprehensive employee management functionality inclu
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/employees
+https://api.upsurgemedia.in/api/v1/employees
 ```
 
 ## Overview
@@ -154,7 +154,7 @@ Retrieve a paginated list of employees with filtering options.
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/employees?departmentId=eng-uuid&status=active&limit=20" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/employees?departmentId=eng-uuid&status=active&limit=20" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -330,7 +330,7 @@ Create a new employee record (Admin/HR only).
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/employees" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/employees" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

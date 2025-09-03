@@ -9,7 +9,7 @@ The Upsurge HRMS API is a comprehensive RESTful API that provides complete human
 - **Protocol**: HTTPS only
 - **Authentication**: JWT Bearer Token
 - **Data Format**: JSON
-- **Swagger Documentation**: `https://api.upsurgemedia.in/api`
+- **Swagger Documentation**: `https://api.upsurgemedia.in/api/docs`
 
 ## 📊 API Categories
 
@@ -426,7 +426,7 @@ Content-Type: multipart/form-data
 ### Interactive Documentation
 
 Visit our Swagger UI for interactive API testing:
-`https://api.upsurgemedia.in/api`
+`https://api.upsurgemedia.in/api/docs`
 
 ### Sample Data
 

@@ -13,8 +13,8 @@ https://api.upsurgemedia.in
 
 ### 🔗 Quick Links
 - **API Base URL**: `https://api.upsurgemedia.in`
-- **Swagger Documentation**: `https://api.upsurgemedia.in/api`
-- **Health Check**: `https://api.upsurgemedia.in/health`
+- **Swagger Documentation**: `https://api.upsurgemedia.in/api/docs`
+- **Health Check**: `https://api.upsurgemedia.in/api/v1/health`
 
 ## ✨ Key Features
 
@@ -75,7 +75,7 @@ https://api.upsurgemedia.in
 
 ### Example Request
 ```bash
-curl -X GET "https://api.upsurgemedia.in/employees" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/employees" \
   -H "Authorization: Bearer your-jwt-token" \
   -H "Content-Type: application/json"
 ```

@@ -5,7 +5,7 @@ The Leave Management API provides comprehensive leave application, approval work
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/leave
+https://api.upsurgemedia.in/api/v1/leave
 ```
 
 ## Overview
@@ -166,7 +166,7 @@ Submit a new leave application.
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/leave" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/leave" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{

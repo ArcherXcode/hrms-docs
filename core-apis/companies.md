@@ -5,7 +5,7 @@ The Companies API provides comprehensive company management functionality for mu
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/companies
+https://api.upsurgemedia.in/api/v1/companies
 ```
 
 ## Overview
@@ -119,7 +119,7 @@ Retrieve a paginated list of companies (Super Admin only).
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/companies?isActive=true&size=medium" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/companies?isActive=true&size=medium" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -257,7 +257,7 @@ Create a new company (Super Admin only).
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/companies" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/companies" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
@@ -335,7 +335,7 @@ file: <image-file>
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/companies/company-uuid/logo" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/companies/company-uuid/logo" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -F "file=@/path/to/logo.png"
 ```

@@ -5,7 +5,7 @@ The Users API provides comprehensive user management functionality including use
 ## Base Endpoint
 
 ```
-https://api.upsurgemedia.in/users
+https://api.upsurgemedia.in/api/v1/users
 ```
 
 ## Overview
@@ -76,7 +76,7 @@ Authenticate a user and receive JWT tokens.
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/auth/login" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/auth/login" \
   -H "Content-Type: application/json" \
   -d '{
     "email": "admin@upsurgemedia.com",
@@ -195,7 +195,7 @@ Retrieve a paginated list of users (Admin/HR only).
 
 **Example:**
 ```bash
-curl -X GET "https://api.upsurgemedia.in/users?role=employee&isActive=true&limit=20" \
+curl -X GET "https://api.upsurgemedia.in/api/v1/users?role=employee&isActive=true&limit=20" \
   -H "Authorization: Bearer YOUR_TOKEN"
 ```
 
@@ -303,7 +303,7 @@ Create a new user account (Admin/HR only).
 
 **Example:**
 ```bash
-curl -X POST "https://api.upsurgemedia.in/users" \
+curl -X POST "https://api.upsurgemedia.in/api/v1/users" \
   -H "Authorization: Bearer YOUR_TOKEN" \
   -H "Content-Type: application/json" \
   -d '{
